@@ -19,22 +19,22 @@ namespace BuilderPatternI_mUsing.BuilderInterface
         {
             reportEmploye.Header = $"Emploees: {DateTime.Now}\n";
             reportEmploye.Header +=
-                "\n-----------------------------------------------\n"
-            +"\n-----------------------------------------------------\n";
+                "\n\t\t-----------------------------------------------\n"
+            +"\n\t--------------------------------------------------------------\n";
         }
         public void BuilderBody()
         {
             reportEmploye.Body =
                 string.Join(Environment.NewLine,
-                employees.Select(e => $"Emploee {e.Name}\t\t{e.Salary}"));
+                employees.Select(e => $"\t\tEmploee {e.Name}\t\t{e.Salary}"));
         }
         public void BuilderFooter()
         {
             reportEmploye.Footer =
-                "\n--------------------------------------\n";
+                "\n\t\t--------------------------------------\n";
             reportEmploye.Footer +=
-                $"\nTotal Emploees {employees.Count()}" +
-                $"]nTotal summa{employees.Sum(a => a.Salary)}";
+                $"\n\t\tTotal Emploees {employees.Count()}" +
+                $"\n\t\tTotal summa{employees.Sum(a => a.Salary)}";
         }
         public ReportEmploye GetReport()
         {

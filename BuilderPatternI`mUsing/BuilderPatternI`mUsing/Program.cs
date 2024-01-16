@@ -12,7 +12,8 @@ namespace BuilderPatternI_mUsing
             List<Employee> employees = new List<Employee>()
             {
                 new Employee{Name="Alex", Salary=567457},
-                new Employee{Name="Fred", Salary=54654}
+                new Employee{Name="Fred", Salary=54654},
+                new Employee{Name="Lumpy", Salary=54654}
             };
             SuperBuilder reportEmploye = new SuperBuilder(employees);
             EmployeDirector employeDirector = new EmployeDirector(reportEmploye);
