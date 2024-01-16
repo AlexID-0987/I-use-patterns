@@ -8,6 +8,7 @@ namespace BuilderPatternI_mUsing.BuilderInterface
 {
     public class SuperBuilder:IEmploeeBuilder
     {
+        //class use interface and beginen classes employee , report
         private ReportEmploye reportEmploye;
         private readonly IEnumerable<Employee> employees;
         public SuperBuilder(IEnumerable<Employee> _emp)
@@ -17,7 +18,7 @@ namespace BuilderPatternI_mUsing.BuilderInterface
         }
         public void BuilderHeader()
         {
-            reportEmploye.Header = $"Emploees: {DateTime.Now}\n";
+            reportEmploye.Header = $"\t\tEmploees: {DateTime.Now}\n";
             reportEmploye.Header +=
                 "\n\t\t-----------------------------------------------\n"
             +"\n\t--------------------------------------------------------------\n";
